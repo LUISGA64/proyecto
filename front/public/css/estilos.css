@@ -1,8 +1,16 @@
     .navbar {
-        background-color: #d0d0d0;
+        background-color: rgba(255, 231, 16, 0.899);
         color: #ffff
     }
     
     .navbar-brand {
         color: #0d2343
+    }
+
+    .site-header {
+        background-color: #0d2343;
+    }
+
+    .App {
+        background-color: #0d2343;
     }

@@ -1,9 +1,24 @@
 var mongoose = require('mongoose');
-var salesSchema = new mongoose.Schema({
+var salesSchema = mongoose.Schema({
 producto: {
     type: Schema.ObjectId,
     ref: "products"
 },
-cantidad: Number,
-});
+cantidad: {
+    type: Number,
+    required:[true,"¿Cuantos productos desea comprar?"],
+    default:0
+},
+comprador:{
+    type: String,
+    required: [true, "Por favor registre el comprador"],
+    trie: true
+},
+numero_factura:{
+    type:Number
+},
+valor_total: {
+    type: Number,
+    default:0.0
+}
 });
