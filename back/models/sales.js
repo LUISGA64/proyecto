@@ -22,3 +22,5 @@ valor_total: {
     default:0.0
 }
 });
+
+module.exports=mongoose.model("sales",salesSchema);
