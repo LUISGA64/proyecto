@@ -2,7 +2,7 @@ const { json } = require("express")
 const salesSchema = require("../models/sales");
 
 exports.getSalesProducts = async(req, res, next) => {
-    const sales = await salesSchema.find();
+    const sales = await salesSchema.find().populate("products");
     if (!sales) {
         return res.status(404).json({
             success: false,

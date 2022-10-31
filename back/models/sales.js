@@ -2,18 +2,13 @@ var mongoose = require("mongoose");
 
 const salesSchema = mongoose.Schema({
 
-    [{
-        $lookup: {
-            from: "productos",
-            localField: "producto",
-            foreignField: "nombre",
-            as: "listaProducto"
+
+    producto: [
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref: 'productos',
         }
-    }],
-    producto: {
-        type: Schema.ObjectId,
-        ref: "products"
-    },
+    ],
     cantidad: {
         type: Number,
         required: [true, "¿Cuantos productos desea comprar?"],
