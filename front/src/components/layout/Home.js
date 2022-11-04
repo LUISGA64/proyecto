@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react'
+import Metadata from './Metadata'
 
 export const Home = () => {
     return (
         <Fragment>
+        <Metadata title="Proyecto Estudio"></Metadata>
         <h1 id='encabezado_productos' className='text-center'> Últimos Productos</h1>
 
             <section id='productos' className='container mt-5'>
