@@ -18,10 +18,10 @@ const productsSchema=mongoose.Schema({
         required: [true,"Por favor seleccione la categoria del producto"],
         enum: {
             values: [
-                "Ropa niño",
-                "Ropa niña",
-                "Zapatos niño",
-                "Zapatos niña"
+                "Hombre",
+                "Niña",
+                "Niño",
+                "Mujer"
             ]
         }
     },
